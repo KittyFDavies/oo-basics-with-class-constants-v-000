@@ -1,6 +1,6 @@
 class Book
   attr_accessor :author, :page_count, :genre
-  attr_reader :title, :genre
+  attr_reader :title, :genre #since this is the reader for genre...
 
   def initialize(title)
     @title = title
@@ -10,4 +10,8 @@ class Book
     puts "Flipping the page...wow, you read fast!"
   end
 
+  def genre=(genre) #... create the writer here and add the constant shovel code
+    @genre = genre
+    GENRES << genre 
+  end
 end
